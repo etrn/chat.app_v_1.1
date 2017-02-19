@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Application</title>
+    <link rel="icon" href="mg/favicon-128.png" sizes="128x128" type="image/png">
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <!-- ENTER FORM -->
+    <div class="enter">
+        <div class="enter-tab">
+            <input type="radio" id="signin" name="enter-tab-1" checked>
+            <label for="signin">Sign in</label>
+            <input type="radio" id="signup" name="enter-tab-1">
+            <label for="signup">Sign up</label> 
+    <!-- SIGN IN FORM -->
+            <div class="signin-form">
+                <div class="signin-form__email">
+                    <input type="email" name="email" placeholder="Email" title="Enter your email" required/>
+                </div>
+                <div class="signin-form__password">
+                    <input type="password" name="password" placeholder="Password" title="Enter your password" required/>
+                </div>
+                <div class="signin-form__button">
+                    <label for="signin">
+                        <input type="submit" name="signin" value="Sign in">
+                    </label>
+                </div>
+                <div class="signin-form__recovery">
+                    <a href="">Forgot your password?</a>
+                </div>
+            </div>
+    <!-- SIGN UP FORM -->
+            <div class="signup-form">
+                <div class="signup-form__email">
+                    <input type="email" name="email" placeholder="email" title="Enter your email" required/>
+                </div>
+                <div class="signup-form__fullname">
+                    <input type="text" name="firstname" placeholder="first name" title="Enter your first name" required/>
+                </div>
+                <div class="signup-form__fullname">
+                    <input type="text" name="lastdname" placeholder="last name" title="Enter your last name" required/>
+                </div>
+                <div class="signup-form__password">
+                    <input type="password" name="password" placeholder="password" title="Enter your password" required/>
+                </div>
+                <div class="signup-form__password">
+                    <input type="password" name="confirm-password" placeholder="confirm password" title="Confirm your password" required/>
+                </div>
+                <div class="signup-form__button">
+                    <label for="signup">
+                        <input type="submit" name="signup" value="Sign up">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <!-- END OF ENTER FORM -->
+    
+    <!-- CHAT -->
+    <div class="chat">
+    <!-- NAVIGATION -->
+     <div class="chat-nav">
+        <div class="chat__logo">
+            <img class="logo" src="img/logotriangle.png" alt="chat logo"></img>
+        </div>
+        <!-- HAMBURGER MENU -->    
+        <nav class="menu-show">
+            <input type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="menu">
+                <a href="#"><li>Profile</li></a>
+                <a href="#"><li>Contacts</li></a>
+                <a href="#"><li>Settings</li></a>
+                <a href="#"><li>Sign out</li></a>
+            </ul>
+        </nav>
+        <!-- Chat conversation list -->
+        <nav class="chat-conv">
+            <ul class="chat-conv__list">
+                <li class="chat-conv__item">
+                    <div class="chat-conv__image">
+                         <img src="img/user2.png" class="chat-conv__photo" alt="conversation user avatar"></img>
+                    </div>
+                    <div class="chat-conv__message">
+                         <h4 class="chat-conv__user_name">Sarrah Conor</h4>
+                         <p class="chat-conv__preview">How many programmers does it take to...</p>
+                    </div>
+                    <time class="chat-conv__time">now</time>
+                </li>
+                <li class="chat-conv__item">
+                    <div class="chat-conv__image">
+                         <img src="img/user3.png" class="chat-conv__photo" alt="conversation user avatar"></img>
+                    </div>
+                    <div class="chat-conv__message">
+                         <h4 class="chat-conv__user_name">John Snow</h4>
+                         <p class="chat-conv__preview">How many programmers does it take to...</p>
+                    </div>
+                    <time class="chat-conv__time">13m</time>
+                </li>
+                <li class="chat-conv__item">
+                    <div class="chat-conv__image">
+                         <img src="img/user4.png" class="chat-conv__photo" alt="conversation user avatar"></img>
+                    </div>
+                    <div class="chat-conv__message">
+                         <h4 class="chat-conv__user_name">Stephania Currie</h4>
+                         <p class="chat-conv__preview">How many programmers does it take to...</p>
+                    </div>
+                    <time class="chat-conv__time">57m</time>
+                </li>
+                <li class="chat-conv__item">
+                    <div class="chat-conv__image">
+                         <img src="img/user5.png" class="chat-conv__photo" alt="conversation user avatar"></img>
+                    </div>
+                    <div class="chat-conv__message">
+                         <h4 class="chat-conv__user_name">Bo Jack</h4>
+                         <p class="chat-conv__preview">How many programmers does it take to...</p>
+                    </div>
+                    <time class="chat-conv__time">13h</time>
+                </li>
+                <li class="chat-conv__item">
+                    <div class="chat-conv__image">
+                         <img src="img/user6.png" class="chat-conv__photo" alt="conversation user avatar"></img>
+                    </div>
+                    <div class="chat-conv__message">
+                         <h4 class="chat-conv__user_name">Anna Smith</h4>
+                         <p class="chat-conv__preview">How many programmers does it take to...</p>
+                    </div>
+                    <time class="chat-conv__time">13d</time>
+                </li>
+                <li class="chat-conv__item">
+                    <div class="chat-conv__image">
+                         <img src="img/user7.png" class="chat-conv__photo" alt="conversation user avatar"></img>
+                    </div>
+                    <div class="chat-conv__message">
+                         <h4 class="chat-conv__user_name">Jessie Chan</h4>
+                         <p class="chat-conv__preview">How many programmers does it take to...</p>
+                    </div>
+                    <time class="chat-conv__time">113d</time>
+                </li>
+            </ul>
+        </nav>
+     </div>
+     <!-- MESSAGING -->
+     <div class="chat-main">
+         <div class="chat-main__messaging">
+            <div class="chat-main__item">
+                <div class="chat-main__user">
+                    <img src="img/user2.png" class="chat-main__photo" alt="user profile image"></img> 
+                </div>
+                <div class="chat-main-message">
+                    <div class="chat-main-message__text">
+                        Finnaly I've got you online! 
+                        So, how was your last interview? 
+                    </div>
+                </div>
+                 <div class="chat-main-message__time">
+                        13:58
+                </div>
+            </div>
+            <div class="chat-main__item">
+                <div class="chat-main__user">
+                    <img src="img/user1.png" class="chat-main__photo" alt="user profile image"></img> 
+                </div>
+                <div class="chat-main-message">
+                    <div class="chat-main-message__text">
+                        Sorry, I'm here quite rarely. I'd better tell you what my wife said:
+                        What...what do you mean, you "tried some breakdancing"?
+                    </div>
+                </div>
+                <div class="chat-main-message__time">
+                        14:02
+                </div>
+            </div>
+            <div class="chat-main__item">
+                <div class="chat-main__user">
+                    <img src="img/user2.png" class="chat-main__photo" alt="user profile image"></img> 
+                </div>
+                <div class="chat-main-message">
+                    <div class="chat-main-message__text">
+                        Seriously, seriously, you tried breakdancing???
+                    </div>
+                </div>
+                <div class="chat-main-message__time">
+                        14:03
+                </div>
+            </div>
+            <div class="chat-main__item">
+                <div class="chat-main__user">
+                    <img src="img/user1.png" class="chat-main__photo" alt="user profile image"></img> 
+                </div>
+                <div class="chat-main-message">
+                    <div class="chat-main-message__text">
+                        Where's the best place to hide a body?
+                        Page two of Google.   
+                    </div>
+                </div>
+                <div class="chat-main-message__time">
+                        16:36
+                </div>
+            </div>
+            <div class="chat-main__item">
+                <div class="chat-main__user">
+                    <img src="img/user2.png" class="chat-main__photo" alt="user profile image"></img> 
+                </div>
+                <div class="chat-main-message">
+                    <div class="chat-main-message__text">
+                        Heh, Hide all of the desktop icons on someone's computer 
+                        and replace the monitor's wallpaper with a screen-shot of their desktop.
+                    </div>
+                </div>
+                <div class="chat-main-message__time">
+                        16:38
+                </div>
+            </div>
+        <!-- Sending message -->
+            <form class="chat-main-send">
+				<div contenteditable="true" class="chat-main-send__message" placeholder="Type something..."></div>
+				<label for="attached_file">
+                    <img class="attach_file_icon" src="img/attach.png"/>
+                    <input type="file" name="attached_file" class="chat-main__attechment"/>
+                </label>
+				<input class="chat-main-send__button" type="image"  src="img/send-button.png" alt="Send"/>
+			</form>
+         </div>
+     </div>
+    </div>
+</body>
+</html>

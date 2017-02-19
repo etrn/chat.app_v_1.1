@@ -1,0 +1,428 @@
+/* styles for enter form*/
+body
+{
+    margin: 0;
+    padding: 0;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    background-color: #ffffff;
+}
+.enter {
+    display: none; /* temporary hide */
+    position: absolute;
+    background-color: rgba(205, 205, 205, 0.7);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.enter-tab {
+    max-width: 60%;
+    float: none;
+    list-style: none;
+    padding: 0;
+    margin: 75px auto;
+    border-bottom: 4px solid #3B3E99;
+}
+.enter-tab:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.enter-tab input[type=radio] {
+    display:none;
+}
+.enter-tab>label {
+    display: block;
+    float: left;    
+    width: 50%;
+    color: #989AD7;
+    font-size: 30px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2;
+    outline: none;
+    cursor: pointer;
+    box-shadow: inset 0 4px #989AD7;
+    border-bottom: 4px solid #989AD7;
+    transition: all 0.5s;
+    background-color: #ffffff;
+}
+
+.enter-tab>label:hover {
+    color: #3B3E99;
+    box-shadow: inset 0 4px #3B3E99;
+    border-bottom: 4px solid #3B3E99;
+}
+.signin-form, .signup-form {
+    display: none;
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color:#ffffff;
+}
+/* bouncing animation*/
+.signin-form * {
+    animation: scale 0.7s ease-in-out;
+}
+.signup-form * {
+    animation: scale 0.7s ease-in-out;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+    }
+  50% {
+    transform: scale(1.01);
+    opacity: 0.5;
+    }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Appear */
+.enter-tab #signin:checked + label,
+.enter-tab #signup:checked + label {
+    background: #ffffff;
+    box-shadow: inset 0 4px #3B3E99;
+    border-bottom: 4px solid #3B3E99;
+    color: #3B3E99;
+}
+ 
+#signin:checked ~ .signin-form,
+#signup:checked ~ .signup-form {
+    display: block;
+}
+/* Input styles */
+.signin-form>div, .signup-form>div {
+    color: #2c4160;
+    max-width: 80%;
+    font-size: 20px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+.signin-form input, .signup-form input {
+    border: 4px solid #989AD7;
+    margin: 0px;
+    height: 32px;
+    min-width: 280px;
+    outline: none;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+.signup-form__button input, .signin-form__button input {
+    border: 4px solid #989AD7;
+    margin: 0px;
+    height: 32px;
+    min-width: 280px;
+    font-size: 18px;
+    background-color: #989AD7;
+    color: #3B3E99;
+    box-sizing: border-box;
+}
+.signin-form__recovery {
+    margin-top: 5px;
+    padding: 0;
+    border: 0;
+}
+.signin-form__recovery a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #F8F8FC;
+    cursor: default;
+
+}
+/* Chat styles */
+.chat {
+    display: flex;
+    height: 100%;
+    min-width: 600px;
+    max-width: 1200px;
+}
+/* Navigation styles*/
+.chat-nav {
+    background: #3B3E99;
+    width: 30%;
+    max-width: 380px;
+    height: 100%
+}
+.chat__logo {
+    margin: 10px 160px 10px 160px;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Chat conversations styles */
+.chat-conv {
+    max-width: 380px;
+    overflow-y: auto;
+    display: flex;
+}
+.chat-conv__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+.chat-conv__item {
+    width: 100%;
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+}
+.chat-conv__image {
+    flex-shrink: 0;
+    height: 50px;
+    margin: 20px 10px;
+}
+.chat-conv__image>img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.chat-conv__message {
+    flex-grow: 0;
+    max-width: 60%;
+}
+.chat-conv__preview {
+    flex-grow: 0;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.chat-conv__item:hover {
+    background: #F23F79;
+    color: #ffffff;
+}
+.chat-conv__message h4 {
+    color: #ffffff;
+    flex-grow: 0;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 30px 0 0 0;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+.chat-conv__message p {
+    font-size: 12px;
+    color: #7D7FDC;
+    margin: 0;
+}
+.chat-conv__time {
+    align-self: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background: #37398D;
+    color: #7D7FDC;
+    font-size: 12px;
+    margin-right: 10px;
+    max-width: 50px;
+    padding: 0 5px;
+    text-align: center;
+}
+
+/* Hamburger menu */
+.menu-show {
+    display: block;
+    position: relative;
+    top: -50px;
+    left: 300px;
+    z-index: 1;
+}
+.menu-show input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: default;
+    opacity: 0; 
+    z-index: 2;
+}
+.menu-show span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+      
+    background: #cdcdcd;
+    border-radius: 3px;
+      
+    z-index: 1;
+      
+    transform-origin: 4px 0px;
+      
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+.menu-show span:first-child {
+    transform-origin: 0% 0%;
+}
+
+.menu-show span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+/* Transform hamburger into the cross */
+.menu-show input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #cdcdcd;
+}
+.menu-show input:checked ~ span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+/* Hidding the middle piece of a hamburger */
+.menu-show input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+.menu {
+    display: none;
+    position: absolute;
+    width: 300px;
+    margin: -50px 0 0 0;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    /*   Some animation for menu
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+      
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);*/
+}
+
+.menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+.menu-show input:checked ~ ul {
+    transform: scale(1.0, 1.0);
+    opacity: 1;
+}
+
+/* Messaging field styles */
+.chat_main {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1200px;
+}
+.chat-main__messaging {
+    position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 50px 0;
+	max-width: 940px;	
+	font-size: 0;
+}
+.chat-main__item {
+    position: relative;
+	margin: 20px 0 20px 20px; 
+	padding:0 180px 0 70px;
+}
+.chat-main__item:nth-child(even) {
+    text-align:right;
+    margin: 20px 20px 20px 0;
+	padding:0 70px 0 180px;
+}
+.chat-main__user {
+    position:absolute;
+	top:50%;
+	left:0;
+	margin-top:-50px;
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #DAADAE7;
+	vertical-align: middle;
+}
+.chat-main__photo {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-radius: 50%;
+	transition: all 200ms ease-in-out;
+}
+.chat-main__user:hover .chat-main__photo {
+    top: -15%;
+	left: -15%;
+	width: 120%;
+	height: 120%;
+}
+.chat-main__item:nth-child(even) .chat-main__user {
+    left: auto;
+    right: 0;
+}
+.chat-main-message {
+    display: inline-block;
+	position: relative;
+	padding: 7px 20px;
+	border-radius: 20px;
+	background: #989AD7;
+	vertical-align: middle;
+	font-size: 14px;
+	color: #DEDDF2;
+	text-align:left;
+}
+.chat-main__item:nth-child(even) .chat-main-message {
+	background: #F1F1FB;
+	color: #5B5B5D;
+}
+.chat-main-message__time {
+    float: right;
+	margin: 0 0 0 10px;
+	color: #8b8dc4;
+	font-weight: normal;
+}
+.chat-main-message__text {
+    overflow: hidden;
+	margin: 0 40px 0 0;
+	white-space: normal;
+}
+.chat-main-send {
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.chat-main-send__button {
+    margin-left: 10px;
+    width: 25px;
+}
+.chat-main-send__message {
+    font-size: 14px;
+    color: #8b8dc4;
+    max-height: 100px;
+    min-height: 30px;
+    max-width: 400px;
+    overflow: auto;
+    outline: none;
+    padding: 5px;
+    background: #F8F8FC;
+    border-radius: 15px;
+    border: 2px solid #ffffff;
+}
+/* Replacing input with icon */
+.chat-main__attechment {
+    display: none;
+}
+.attach_file_icon {
+    margin-left: 10px;
+    width: 25px;
+}
