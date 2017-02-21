@@ -64,7 +64,9 @@
     <div class="chat">
     <!-- NAVIGATION -->
          <div class="chat-nav">
-        
+            <div class="chat-nav__hide">
+                <input type="checkbox" name="hide-nav" checked/>
+            </div>
             <div class="chat__logo">
                 <img class="logo" src="img/logotriangle.png" alt="chat logo"></img>
             </div>
@@ -153,12 +155,15 @@
          </div>
     <!-- MESSAGING -->
         <main class="chat-main">
-            <header>
+            <header class="chat-main-header">
+                <div class="chat-main__new_message">
+                    <input type="checkbox" name="new_message"/>
+                </div>
                 <div class="chat-main__search">
                     <input type="text" name="search" placeholder="Search..."/>
                 </div>
                 <div class="chat-main-active__info">
-                    
+                    <input type="checkbox" name="conversation__info"/> 
                 </div>
             </header>
             <div class="chat-main__messaging">
@@ -167,24 +172,20 @@
                         <img src="img/user2.png" class="chat-main__photo" alt="user profile image"></img> 
                     </div>
                     <div class="chat-main-message">
-                        <div class="chat-main-message__text">
                             Finnaly I've got you online! 
                             So, how was your last interview? 
-                        </div>
                     </div>
                      <div class="chat-main-message__time">
                             13:58
                     </div>
                 </div>
-                <div class="chat-main__item">
+                <div class="chat-main__item-me">
                     <div class="chat-main__user">
                         <img src="img/user1.png" class="chat-main__photo" alt="user profile image"></img> 
                     </div>
                     <div class="chat-main-message">
-                        <div class="chat-main-message__text">
                             Sorry, I'm here quite rarely. I'd better tell you what my wife said:
                             What...what do you mean, you "tried some breakdancing"?
-                        </div>
                     </div>
                     <div class="chat-main-message__time">
                             14:02
@@ -195,23 +196,19 @@
                         <img src="img/user2.png" class="chat-main__photo" alt="user profile image"></img> 
                     </div>
                     <div class="chat-main-message">
-                        <div class="chat-main-message__text">
                             Seriously, seriously, you tried breakdancing???
-                        </div>
                     </div>
                     <div class="chat-main-message__time">
                             14:03
                     </div>
                 </div>
-                <div class="chat-main__item">
+                <div class="chat-main__item-me">
                     <div class="chat-main__user">
                         <img src="img/user1.png" class="chat-main__photo" alt="user profile image"></img> 
                     </div>
                     <div class="chat-main-message">
-                        <div class="chat-main-message__text">
                             Where's the best place to hide a body?
                             Page two of Google.   
-                        </div>
                     </div>
                     <div class="chat-main-message__time">
                             16:36
@@ -222,10 +219,8 @@
                         <img src="img/user2.png" class="chat-main__photo" alt="user profile image"></img> 
                     </div>
                     <div class="chat-main-message">
-                        <div class="chat-main-message__text">
                             Heh, Hide all of the desktop icons on someone's computer 
                             and replace the monitor's wallpaper with a screen-shot of their desktop.
-                        </div>
                     </div>
                     <div class="chat-main-message__time">
                             16:38
@@ -233,7 +228,7 @@
                 </div>
     <!-- SENDING MESSAGE FORM -->
                 <form class="chat-main-send">
-    				<div contenteditable="true" class="chat-main-send__message"></div>
+    				<div contenteditable="true" class="chat-main-send__message"><span>Type something...</span></div>
     				<label for="attached_file">
                         <img class="attach_file_icon" src="img/attach.png"/>
                         <input type="file" name="attached_file" class="chat-main__attechment"/>
