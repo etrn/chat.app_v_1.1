@@ -8,9 +8,9 @@ body
     background-color: #fff;
 }
 .enter {
-    display: none; /* temporary hide */
+    /*display: none; /* temporary hide */
     position: absolute;
-    background-color: rgba(205, 205, 205, 0.7);
+    background-color: rgba(152, 154, 215, 0.7);
     width: 100%;
     height: 100%;
     z-index: 10;
@@ -113,7 +113,7 @@ body
     font-size: 18px;
     box-sizing: border-box;
 }
-.signup-form__button input, .signin-form__button input {
+.form__button input {
     border: 4px solid #3B3E99;
     margin: 0px;
     height: 32px;
@@ -123,12 +123,12 @@ body
     color: #FFF;
     box-sizing: border-box;
 }
-.signin-form__recovery {
+.form__recovery {
     margin-top: 5px;
     padding: 0;
     border: 0;
 }
-.signin-form__recovery a {
+.form__recovery a {
     font-size: 12px;
     text-decoration: none;
     color: #F8F8FC;
@@ -240,7 +240,7 @@ body
 .chat-menu-show input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #cdcdcd;
+    background: #fff;
 }
 .chat-menu-show input:checked ~ span:nth-last-child(2) {
     opacity: 1;
@@ -286,7 +286,7 @@ body
 }
 .chat-conv-active__item {
     background-color: #F23F79;
-    color: #ffffff;
+    color: #fff;
     display: flex;
     height: 100px;
     justify-content: space-around;
@@ -302,6 +302,26 @@ body
     width: 50px;
     height: 50px;
 }
+/* Badge Styles */
+.badge {
+   position:relative;
+}
+.badge[data-badge]:after {
+   content: attr(data-badge);
+   position: absolute;
+   top: -2px;
+   right: -5px;
+   font-size: 12px;
+   background: #F23F79;
+   color: #fff;
+   width: 14px;
+   height: 14px;
+   text-align: center;
+   border-radius: 50%;
+}
+.badge[data-badge=””]:after {
+content: none;
+}
 .chat-conv__message {
     flex-grow: 0;
     max-width: 60%;
@@ -314,18 +334,18 @@ body
     white-space: nowrap;
 }
 .chat-conv-active__item .chat-conv__preview {
-    color: #ffffff;
+    color: #fff;
 }
 .chat-conv-active__item>time {
-    background: #ffffff;
+    background: #fff;
     color: #F23F79;
 }
 .chat-conv__item:hover {
     background: #F23F79;
-    color: #ffffff;
+    color: #fff;
 }
-.chat-conv__message h4 {
-    color: #ffffff;
+h4 {
+    color: #fff;
     flex-grow: 0;
     font-weight: normal;
     font-size: 14px;
@@ -335,13 +355,13 @@ body
     text-overflow: ellipsis;
     
 }
-.chat-conv__message p {
+p {
     font-size: 12px;
     color: #7D7FDC;
     margin: 0;
 }
 .chat-conv__item:hover .chat-conv__preview {
-    color: #ffffff!important;
+    color: #fff !important;
 }
 .chat-conv__time {
     align-self: center;

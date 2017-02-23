@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- ENTER FORM -->
-    <div class="enter">
+    <div id ="enter" class="enter">
         <div class="enter-tab">
             <input type="radio" id="signin" name="enter-tab-1" checked>
             <label for="signin">Sign in</label>
@@ -17,41 +17,41 @@
             <label for="signup">Sign up</label> 
     <!-- SIGN IN FORM -->
             <div class="signin-form">
-                <div class="signin-form__email">
+                <div>
                     <input type="email" name="email" placeholder="Email" title="Enter your email" required/>
                 </div>
-                <div class="signin-form__password">
+                <div>
                     <input type="password" name="password" placeholder="Password" title="Enter your password" required/>
                 </div>
-                <div class="signin-form__button">
+                <div class="form__button">
                     <label for="signin">
-                        <input type="submit" name="signin" value="Sign in">
+                        <input id="hide" type="submit" name="signin" value="Sign in">
                     </label>
                 </div>
-                <div class="signin-form__recovery">
+                <div class="form__recovery">
                     <a href="">Forgot your password?</a>
                 </div>
             </div>
     <!-- SIGN UP FORM -->
             <div class="signup-form">
-                <div class="signup-form__email">
-                    <input type="email" name="email" placeholder="email" title="Enter your email" required/>
+                <div>
+                    <input type="email" name="email" placeholder="Email" title="Enter your email" required/>
                 </div>
-                <div class="signup-form__fullname">
-                    <input type="text" name="firstname" placeholder="first name" title="Enter your first name" required/>
+                <div>
+                    <input type="text" name="firstname" placeholder="First name" title="Enter your first name" required/>
                 </div>
-                <div class="signup-form__fullname">
-                    <input type="text" name="lastdname" placeholder="last name" title="Enter your last name" required/>
+                <div>
+                    <input type="text" name="lastdname" placeholder="Last name" title="Enter your last name" required/>
                 </div>
-                <div class="signup-form__password">
-                    <input type="password" name="password" placeholder="password" title="Enter your password" required/>
+                <div>
+                    <input type="password" name="password" placeholder="Password" title="Enter your password" required/>
                 </div>
-                <div class="signup-form__password">
-                    <input type="password" name="confirm-password" placeholder="confirm password" title="Confirm your password" required/>
+                <div>
+                    <input type="password" name="confirm-password" placeholder="Confirm password" title="Confirm your password" required/>
                 </div>
-                <div class="signup-form__button">
+                <div class="form__button">
                     <label for="signup">
-                        <input type="submit" name="signup" value="Sign up">
+                        <input id="hider" type="submit" name="signup" value="Sign up">
                     </label>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                         <time class="chat-conv__time">now</time>
                     </li>
                     <li class="chat-conv__item">
-                        <div class="chat-conv__image">
+                        <div class="chat-conv__image badge" data-badge="1">
                              <img src="img/user3.png" class="chat-conv__photo" alt="conversation user avatar"></img>
                         </div>
                         <div class="chat-conv__message">
@@ -158,7 +158,7 @@
     <!-- MESSAGING -->
         <main class="chat-main">
             <header class="chat-main-header">
-                <div class="chat-main__new_message">
+                <div class="chat-main__new_message badge" data-badge="1">
                     <input type="checkbox" name="new_message"/>
                 </div>
                 <div class="chat-main__search">
@@ -240,5 +240,6 @@
             </div>
         </main>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
